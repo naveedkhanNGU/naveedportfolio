@@ -62,8 +62,9 @@ body{
 
 /* Profile Image */
 .profile img {
-  width: 260px;
+  width: min(260px, 80vw);
   border-radius: 15px;
+  display: block;
 }
 
 /* Heading */
@@ -84,6 +85,8 @@ body{
   margin-top: 20px;
   font-size: 20px;
   line-height: 1.8;
+  max-width: 700px;
+  width: 100%;
 }
 
 /* Button */
@@ -146,30 +149,148 @@ body{
   font-size: 20px;
 }
 /*RESPONSIVE DESIGN*/
-@media (max-width: 768px) {
-  .container {
+@media (max-width:768px){
+
+  .container{
     flex-direction: column;
-    padding: 15px;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 20px;
   }
-  .nav-links {
-    margin-top: 15px;
+
+  .logo{
+    font-size: 30px;
+    text-align:center;
   }
-  .nav-links li {
-    margin: 0 12px;
+
+  .nav-links{
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
   }
-  .external {
-    flex-direction: column;
-    text-align: center;
+
+  .nav-links li{
+    margin:0;
   }
-  .box2 h1 {
-    font-size: 38px;
+
+  .nav-links a{
+    font-size:18px;
   }
-  .p1 {
-    font-size: 18px;
+
+  .box2{
+    padding-top:190px;
+    padding-left:20px;
+    padding-right:20px;
   }
-  .profile img {
-    width: 220px;
+
+  .box2 h1{
+    font-size:40px;
+    line-height:1.2;
   }
+
+  .p1{
+    font-size:18px;
+  }
+
+  .profile img{
+    width:220px;
+  }
+
+  .external{
+    flex-direction:column;
+    text-align:center;
+    gap:40px;
+    padding:70px 20px;
+  }
+
+  .heading2,
+  .heading3{
+    font-size:32px;
+  }
+
+  .p2,
+  .p3{
+    font-size:18px;
+  }
+
+  #skill_section{
+    padding:70px 20px;
+  }
+
+  #hskills{
+    font-size:30px;
+    text-align:center;
+  }
+
+  .skill-title{
+    font-size:34px;
+    text-align:center;
+    margin-bottom:40px;
+  }
+
+  .skill{
+    width:100%;
+    max-width:350px;
+  }
+
+  #contact{
+    flex-direction:column;
+    padding:70px 20px;
+    text-align:center;
+  }
+
+  .left h2{
+    font-size:34px;
+  }
+
+  .left p{
+    font-size:18px;
+    word-break:break-word;
+  }
+
+  .right{
+    width:100%;
+  }
+
+  input,
+  textarea,
+  button{
+    width:100%;
+  }
+
+}
+/* for mobile phone responsive */
+@media (max-width:480px){
+
+  .logo{
+    font-size:24px;
+  }
+
+  .box2{
+    padding-top:200px;
+  }
+
+  .box2 h1{
+    font-size:32px;
+  }
+
+  .p1{
+    font-size:16px;
+  }
+
+  .profile img{
+    width:180px;
+  }
+
+  .skill-title{
+    font-size:28px;
+  }
+
+  .left h2{
+    font-size:30px;
+  }
+
 }
 /*SKILLS SECTION*/
 #skill_section {
